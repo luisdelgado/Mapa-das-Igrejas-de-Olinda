@@ -19,8 +19,7 @@ const churchTheme = createMuiTheme({
 
 export default function Home() {
   const addChurch = () => {
-    var audio = document.getElementById('hymn');
-    audio.play();
+    Router.push('https://forms.gle/49MYmgjFsumwah3bA')
   }
 
   const accessMap = () => {
