@@ -9,6 +9,9 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  button: {
+    flexGrow: 2,
+  },
 }));
 
 export default function Home() {
@@ -26,7 +29,7 @@ export default function Home() {
         <meta property="og:title" content="Mapa das Igrejas de Olinda" />
         <meta property="og:url" content="https://mapa-das-igrejas-de-olinda.vercel.app/" />
         <meta property="og:description" content="Conheça os horários das Missas, site e localização das Igrejas de Olinda." />
-        <meta property="og:image" itemprop="image" content="/assets/favicon.png" />
+        <meta property="og:image" itemProp="image" content="/assets/favicon.png" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="pt_BR" />
       </Head>
@@ -40,8 +43,8 @@ export default function Home() {
         <div className={styles.map}>
           <AppBar color="inherit" position="static">
             <Toolbar>
-              <Button>Adicionar Igreja</Button>
-              <Button>Acessar o Mapa</Button>
+              <Button className={classes.button}>Adicionar Igreja</Button>
+              <Button className={classes.button}>Acessar o Mapa</Button>
             </Toolbar>
           </AppBar>
         </div>
