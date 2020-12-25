@@ -1,22 +1,22 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
+const churchTheme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#5A2E0B',
+    },
+    secondary: {
+      main: '#D7D7D7',
+    }
   },
-  button: {
-    flexGrow: 2,
-  },
-}));
+});
 
 export default function Home() {
-  const classes = useStyles();
-
   return (
     <div className={styles.container}>
       <Head>
@@ -34,21 +34,23 @@ export default function Home() {
         <meta property="og:locale" content="pt_BR" />
       </Head>
 
-      <main className={styles.main}>
-        <img className={styles.image} src="/igrejaDaSe.jpg" />
-        <img className={styles.imagePhone} src="/igrejaDaSePhone.png" />
-        <p className={styles.description}>conheça horários das Missas, site e localização das Igrejas</p>
-        <h1 className={styles.title}>Mapa das<br></br>Igrejas de<br></br>Olinda</h1>
-        {/* <button className={styles.map}><a href="https://www.google.com/maps/d/edit?mid=1FnwmzldJKxOTJPvf-EfdHozkaERgIiVK&usp=sharing">Acessar o Mapa</a></button> */}
-        <div className={styles.map}>
-          <AppBar color="inherit" position="static">
-            <Toolbar>
-              <Button className={classes.button}>Adicionar Igreja</Button>
-              <Button className={classes.button}>Acessar o Mapa</Button>
-            </Toolbar>
-          </AppBar>
-        </div>
-      </main>
+      <ThemeProvider theme={churchTheme}>
+        <main className={styles.main}>
+          <img className={styles.image} src="/igrejaDaSe.jpg" />
+          <img className={styles.imagePhone} src="/igrejaDaSePhone.png" />
+          <p className={styles.description}>conheça horários das Missas, site e localização das Igrejas</p>
+          <h1 className={styles.title}>Mapa das<br></br>Igrejas de<br></br>Olinda</h1>
+          {/* <button className={styles.map}><a href="https://www.google.com/maps/d/edit?mid=1FnwmzldJKxOTJPvf-EfdHozkaERgIiVK&usp=sharing">Acessar o Mapa</a></button> */}
+          <div className={styles.map}>
+            <AppBar color="primary" position="static">
+              <Toolbar>
+                <Button className={styles.button} color="secondary">Adicionar Igreja</Button>
+                <Button className={styles.button} color="secondary">Acessar o Mapa</Button>
+              </Toolbar>
+            </AppBar>
+          </div>
+        </main>
+      </ThemeProvider>
     </div>
   )
 }

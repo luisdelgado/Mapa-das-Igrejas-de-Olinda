@@ -61,3 +61,7 @@
   width: 100%;
   top: 80%;
 }
+
+.button {
+  flex-grow: 2;
+}
