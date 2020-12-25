@@ -38,10 +38,10 @@ export default function Home() {
         <h1 className={styles.title}>Mapa das<br></br>Igrejas de<br></br>Olinda</h1>
         {/* <button className={styles.map}><a href="https://www.google.com/maps/d/edit?mid=1FnwmzldJKxOTJPvf-EfdHozkaERgIiVK&usp=sharing">Acessar o Mapa</a></button> */}
         <div className={classes.root, styles.map}>
-          <AppBar position="static">
+          <AppBar color="inherit" position="static">
             <Toolbar>
-              <Button color="inherit" >Adicionar Igreja</Button>
-              <Button color="inherit" >Acessar o Mapa</Button>
+              <Button>Adicionar Igreja</Button>
+              <Button>Acessar o Mapa</Button>
             </Toolbar>
           </AppBar>
         </div>
