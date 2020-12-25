@@ -37,7 +37,7 @@ export default function Home() {
         <p className={styles.description}>conheça horários das Missas, site e localização das Igrejas</p>
         <h1 className={styles.title}>Mapa das<br></br>Igrejas de<br></br>Olinda</h1>
         {/* <button className={styles.map}><a href="https://www.google.com/maps/d/edit?mid=1FnwmzldJKxOTJPvf-EfdHozkaERgIiVK&usp=sharing">Acessar o Mapa</a></button> */}
-        <div className={classes.root, styles.map}>
+        <div className={styles.map}>
           <AppBar color="inherit" position="static">
             <Toolbar>
               <Button>Adicionar Igreja</Button>
