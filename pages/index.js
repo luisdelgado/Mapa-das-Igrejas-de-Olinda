@@ -7,6 +7,16 @@ export default function Home() {
       <Head>
         <title>Mapa das Igrejas de Olinda</title>
         <link rel="icon" href="/favicon.png" />
+        <meta name="description" content="Conheça os horários das Missas, site e localização das Igrejas de Olinda." />
+        <meta name="keywords" content="igreja, olinda, horário, missa, localizacao" />
+        <meta name="author" content="Luís Delgado" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta property="og:title" content="Mapa das Igrejas de Olinda" />
+        <meta property="og:url" content="https://mapa-das-igrejas-de-olinda.vercel.app/" />
+        <meta property="og:description" content="Conheça os horários das Missas, site e localização das Igrejas de Olinda." />
+        <meta property="og:image" itemprop="image" content="/assets/favicon.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="pt_BR" />
       </Head>
 
       <main className={styles.main}>
