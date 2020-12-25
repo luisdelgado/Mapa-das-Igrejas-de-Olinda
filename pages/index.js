@@ -4,6 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import Router from "next/router";
 
 const churchTheme = createMuiTheme({
   palette: {
@@ -17,6 +18,15 @@ const churchTheme = createMuiTheme({
 });
 
 export default function Home() {
+  const addChurch = () => {
+    var audio = document.getElementById('hymn');
+    audio.play();
+  }
+
+  const accessMap = () => {
+    Router.push('https://www.google.com/maps/d/edit?mid=1FnwmzldJKxOTJPvf-EfdHozkaERgIiVK&usp=sharing')
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -40,12 +50,11 @@ export default function Home() {
           <img className={styles.imagePhone} src="/igrejaDaSePhone.png" />
           <p className={styles.description}>conheça horários das Missas, site e localização das Igrejas</p>
           <h1 className={styles.title}>Mapa das<br></br>Igrejas de<br></br>Olinda</h1>
-          {/* <button className={styles.map}><a href="https://www.google.com/maps/d/edit?mid=1FnwmzldJKxOTJPvf-EfdHozkaERgIiVK&usp=sharing">Acessar o Mapa</a></button> */}
           <div className={styles.map}>
             <AppBar color="primary" position="static">
               <Toolbar>
-                <Button className={styles.button} color="secondary">Adicionar Igreja</Button>
-                <Button className={styles.button} color="secondary">Acessar o Mapa</Button>
+                <Button className={styles.button} color="secondary" onClick={addChurch}>Adicionar Igreja</Button>
+                <Button className={styles.button} color="secondary" onClick={accessMap}>Acessar o Mapa</Button>
               </Toolbar>
             </AppBar>
           </div>

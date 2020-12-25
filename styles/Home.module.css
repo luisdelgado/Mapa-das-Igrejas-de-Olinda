@@ -43,7 +43,7 @@
   color: #4D290C;
   background-color: #D7D7D7;
   padding: 3%;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .title {
@@ -53,7 +53,7 @@
   color: #4D290C;
   background-color: #D7D7D7;
   padding: 2%;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .map {
