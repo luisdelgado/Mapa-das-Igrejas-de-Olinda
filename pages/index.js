@@ -1,7 +1,19 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Button from '@material-ui/core/Button';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+}));
 
 export default function Home() {
+  const classes = useStyles();
+
   return (
     <div className={styles.container}>
       <Head>
@@ -24,7 +36,15 @@ export default function Home() {
         <img className={styles.imagePhone} src="/igrejaDaSePhone.png" />
         <p className={styles.description}>conheça horários das Missas, site e localização das Igrejas</p>
         <h1 className={styles.title}>Mapa das<br></br>Igrejas de<br></br>Olinda</h1>
-        <button className={styles.map}><a href="https://www.google.com/maps/d/edit?mid=1FnwmzldJKxOTJPvf-EfdHozkaERgIiVK&usp=sharing">Acessar o Mapa</a></button>
+        {/* <button className={styles.map}><a href="https://www.google.com/maps/d/edit?mid=1FnwmzldJKxOTJPvf-EfdHozkaERgIiVK&usp=sharing">Acessar o Mapa</a></button> */}
+        <div className={classes.root, styles.map}>
+          <AppBar position="static">
+            <Toolbar>
+              <Button color="inherit" >Adicionar Igreja</Button>
+              <Button color="inherit" >Acessar o Mapa</Button>
+            </Toolbar>
+          </AppBar>
+        </div>
       </main>
     </div>
   )

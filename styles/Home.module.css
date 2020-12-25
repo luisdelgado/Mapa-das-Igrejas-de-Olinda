@@ -58,13 +58,11 @@
 
 .map {
   position: absolute;
+  width: 100%;
   top: 80%;
-  right: 15%;
+}
+
+.barColor {
   color: #D7D7D7;
   background-color: #5A2E0B;
-  padding: 1%;
-  padding-left: 2%;
-  padding-right: 2%;
-  border-radius: 10px;
-  border-color: #5A2E0B;
 }
